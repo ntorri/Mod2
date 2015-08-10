@@ -1,0 +1,6 @@
+{
+	"parent":"mayhem:item/standard_item",
+	"textures": {
+		"layer0":"mayhem:items/chocolate"
+	}
+}

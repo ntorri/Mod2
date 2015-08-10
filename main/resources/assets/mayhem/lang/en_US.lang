@@ -1,0 +1,29 @@
+<en_US.lang - English localization file for the mod "Mayhem">
+
+item.mayhem_item.name=Mayhem Item
+tile.mayhem_block.name=Mayhem Block
+
+tile.mayhem_ore.name=Mayhem Ore
+tile.mayhem_multi_ore.name=Mayhem Multi Ore
+
+tile.block_properties.black.name=Black Properties Block
+tile.block_properties.white.name=White Properties Block
+item.meta_item.black.name=Black Meta Item
+item.meta_item.white.name=White Meta Item
+
+item.mayhem_pickaxe.name=Mayhem Pickaxe
+item.mayhem_axe.name=Mayhem Axe
+item.mayhem_spade.name=Mayhem Spade
+item.mayhem_hoe.name=Mayhem Hoe
+item.mayhem_sword.name=Mayhem Sword
+item.mayhem_multitool.name=Mayhem Multitool
+
+item.mayhem_boots.name=Mayhem Boots
+item.mayhem_chestplate.name=Mayhem Chestplate
+item.mayhem_helmet.name=Mayhem Helmet
+item.mayhem_leggings.name=Mayhem Leggings
+
+item.mayhem_chocolate.name=Chocolate
+item.lucky_candy.name=Lucky Candy
+
+tile.tile_entity.name=Tile Entity

@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"normal": { "model": "mayhem:tile_entity" }
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"type=white": { "model":"mayhem:block_properties_white" },
+		"type=black": { "model":"mayhem:block_properties_black" }
+	}
+}

@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mayhem",
+  "name": "Mayhem Mod",
+  "description": "My mayhem mod.",
+  "version": "1.0",
+  "mcversion": "1.8x",
+  "url": "www.torridigital.com/minecraft",
+  "updateUrl": "",
+  "authorList": ["CreeperDude719"],
+  "credits": "The Forge and FML guys!!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
