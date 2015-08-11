@@ -27,3 +27,5 @@ item.mayhem_chocolate.name=Chocolate
 item.lucky_candy.name=Lucky Candy
 
 tile.tile_entity.name=Tile Entity
+
+enchantment.arrowFast=Haste
