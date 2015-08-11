@@ -1,5 +1,8 @@
 package com.torridigital.mayhem;
 
+import com.torridigital.mayhem.config.Config;
+
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -8,7 +11,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION)
+@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION, guiFactory = "com.torridigital.creeperdude.config.GGRGuiFactory", acceptableRemoteVersions = "*")
 
 public class Main {
 	public static final String MODID = "mayhem";
@@ -17,6 +20,7 @@ public class Main {
 
     @Instance
     public static Main instance = new Main();
+    public Config config;
     
     @SidedProxy(clientSide="com.torridigital.mayhem.ClientProxy", serverSide="com.torridigital.mayhem.ServerProxy")
     public static CommonProxy proxy;
@@ -24,6 +28,8 @@ public class Main {
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) {
     	proxy.preInit(e);
+    	config = new Config(e.getSuggestedConfigurationFile()).loadConfig();
+        FMLCommonHandler.instance().bus().register(config);
     }
 
     @EventHandler
