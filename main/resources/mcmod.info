@@ -1,5 +1,6 @@
-[
 {
+  "modListVersion": 2,
+  "modList": [{
   "modid": "mayhem",
   "name": "Mayhem Mod",
   "description": "My mayhem mod.",
@@ -12,5 +13,5 @@
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
+}]
 }
-]

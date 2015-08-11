@@ -21,19 +21,21 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  * @author Nate Torri
  * http://bedrockminer.jimdo.com/modding-tutorials/basic-modding-1-8/basic-modfile/
  */
-@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION, guiFactory = "com.torridigital.creeperdude.config.GGRGuiFactory", acceptableRemoteVersions = "*")
+
+@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION, guiFactory = "com.torridigital.mayhem.config.GGRGuiFactory", acceptableRemoteVersions = "*")
 
 public class Main {
 	public static final String MODID = "mayhem";
     public static final String MODNAME = "Mayhem Mod";
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "@MOD_VERSION@";
     
-    public static final CreativeTabs tabCreeper = new CreeperTab("tabCreeper");
+    public static Config config;
+    
+    public static final CreativeTabs tabMayhem = new MayhemTab(CreativeTabs.getNextID(), "standard");
     public static final Enchantment haste = new EnchantmentArrowFast(150, new ResourceLocation("haste"), 2);
 
-    @Instance
+    @Mod.Instance
     public static Main instance = new Main();
-    public static Config config;
     
     @SidedProxy(clientSide="com.torridigital.mayhem.ClientProxy", serverSide="com.torridigital.mayhem.ServerProxy")
     public static CommonProxy proxy;

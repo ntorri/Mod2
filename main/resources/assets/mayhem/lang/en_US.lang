@@ -29,3 +29,5 @@ item.lucky_candy.name=Lucky Candy
 tile.tile_entity.name=Tile Entity
 
 enchantment.arrowFast=Haste
+
+itemGroup.standard=Mayhem Mod
