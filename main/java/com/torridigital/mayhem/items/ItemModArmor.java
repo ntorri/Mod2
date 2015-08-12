@@ -20,6 +20,7 @@ public class ItemModArmor extends ItemArmor {
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
 		if (itemStack.getItem() == ModItems.mayhemHelmet) {
 			this.effectPlayer(player, Potion.nightVision, 0);
+			this.canRepair=true;
 		}
 		if (itemStack.getItem() == ModItems.mayhemChestplate) {
 			this.effectPlayer(player, Potion.digSpeed, 0);
