@@ -28,7 +28,7 @@ public class EnchantmentArrowFast extends Enchantment {
 	}
 
 	/**
-	 * Returns the maximum value of enchantability nedded on the enchantment
+	 * Returns the maximum value of enchantability needed on the enchantment
 	 * level passed.
 	 */
 	public int getMaxEnchantability(int enchantmentLevel) {

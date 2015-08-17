@@ -30,16 +30,16 @@ public class Config extends Configuration {
         rules.put("mobGriefing", true);
         rules.put("naturalRegeneration", true);
 
-        comments.put("commandBlockOutput", "Command blocks should notify admins when they perform commands");
+        comments.put("commandBlockOutput", "Command blocks notification");
         comments.put("doDaylightCycle", "Time progression");
-        comments.put("doFireTick", "Fire should spread and naturally extinguish");
+        comments.put("doFireTick", "Fire should spread");
         comments.put("doMobLoot", "Mobs should drop items");
         comments.put("doMobSpawning", "Mobs should naturally spawn");
         comments.put("keepInventory", "Keep items in inventory after death");
         comments.put("mobGriefing", "Mobs able to change blocks and pick up items");
-        comments.put("naturalRegeneration", "Regenerate health naturally if hunger is full enough (doesn't affect external healing, such as golden apples, the Regeneration effect, etc.)");
+        comments.put("naturalRegeneration", "Regenerate health");
 
-        addCustomCategoryComment(CATEGORY_GAMERULES, "Set the values 'true' or 'false' if you want to have the GameRule enabled or disabled");
+        addCustomCategoryComment(CATEGORY_GAMERULES, "Set the values 'true' or 'false'");
         defaults = (HashMap<String, Boolean>) rules.clone();
     }
 

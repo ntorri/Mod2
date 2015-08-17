@@ -17,7 +17,9 @@ public class MayhemTab extends CreativeTabs {
 	
 	public MayhemTab(int id, String unlocalizedName) {
 		super(id, unlocalizedName);
+		//Hides the scrollbar
 		this.setNoScrollbar();
+		//Sets the background image
 		this.setBackgroundImageName("mayhem.png");
 	}
 	@SideOnly(Side.CLIENT)
@@ -25,7 +27,8 @@ public class MayhemTab extends CreativeTabs {
 		return ModItems.mayhemItem;
 	}
 	
-	/**	@SideOnly(Side.CLIENT)
+	
+	@SideOnly(Side.CLIENT)
     public void displayAllReleventItems(List itemList) {
          
         //Adds string with silk touch lv 1 
@@ -38,8 +41,10 @@ public class MayhemTab extends CreativeTabs {
          
         //Adds all fishing enchantments
         this.addEnchantmentBooksToList(itemList, new EnumEnchantmentType[] { EnumEnchantmentType.FISHING_ROD});
+        
+        super.displayAllReleventItems(itemList);
     }
-    */
+    
 	
 	public void addMetaDataItems(List itemList, Item item, int range) {
 
