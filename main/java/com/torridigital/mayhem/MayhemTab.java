@@ -24,6 +24,7 @@ public class MayhemTab extends CreativeTabs {
 	}
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem() {
+		//Sets the icon on tab
 		return ModItems.mayhemItem;
 	}
 	
@@ -42,12 +43,14 @@ public class MayhemTab extends CreativeTabs {
         //Adds all fishing enchantments
         this.addEnchantmentBooksToList(itemList, new EnumEnchantmentType[] { EnumEnchantmentType.FISHING_ROD});
         
+        //Adds the mayhem items
         super.displayAllReleventItems(itemList);
     }
     
 	
 	public void addMetaDataItems(List itemList, Item item, int range) {
 
+		//Adds meta items
         for (int i = 0; i < range; ++i) {
 
             itemList.add(new ItemStack(item, 1, i));
