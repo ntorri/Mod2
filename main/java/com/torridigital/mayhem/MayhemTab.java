@@ -32,16 +32,26 @@ public class MayhemTab extends CreativeTabs {
 	@SideOnly(Side.CLIENT)
     public void displayAllReleventItems(List itemList) {
          
-        //Adds string with silk touch lv 1 
-        ItemStack string = new ItemStack(Items.string);
-        string.addEnchantment(Enchantment.silkTouch, 1);
-        itemList.add(string);
- 
-        //Adds wooden hoe
-        itemList.add(new ItemStack(Items.wooden_hoe));
+        //Adds diamond sword 
+        ItemStack sword = new ItemStack(Items.diamond_sword);
+        sword.addEnchantment(Enchantment.sharpness, 5);
+        sword.addEnchantment(Enchantment.smite, 5);
+        sword.addEnchantment(Enchantment.baneOfArthropods, 5);
+        sword.addEnchantment(Enchantment.knockback, 2);
+        sword.addEnchantment(Enchantment.looting, 3);
+        sword.addEnchantment(Enchantment.unbreaking, 3);
+        itemList.add(sword);
+        
+        //Adds diamond pickaxe
+        ItemStack pickaxe = new ItemStack(Items.diamond_pickaxe);
+        pickaxe.addEnchantment(Enchantment.efficiency, 5);
+        pickaxe.addEnchantment(Enchantment.fortune, 3);
+        pickaxe.addEnchantment(Enchantment.silkTouch, 1);
+        pickaxe.addEnchantment(Enchantment.unbreaking, 3);
+        itemList.add(pickaxe);
          
-        //Adds all fishing enchantments
-        this.addEnchantmentBooksToList(itemList, new EnumEnchantmentType[] { EnumEnchantmentType.FISHING_ROD});
+        //Adds all armor enchantments
+        this.addEnchantmentBooksToList(itemList, new EnumEnchantmentType[] { EnumEnchantmentType.ARMOR});
         
         //Adds the mayhem items
         super.displayAllReleventItems(itemList);
