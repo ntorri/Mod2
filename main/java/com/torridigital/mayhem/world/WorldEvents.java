@@ -17,26 +17,21 @@ public class WorldEvents {
 	@SubscribeEvent
     public void onWorldLoad(WorldEvent.Load event) {
         GameRules gRules = event.world.getGameRules();
-
         for (Map.Entry<String, Boolean> entry : Main.instance.config.rules.entrySet()) {
             String rule = entry.getKey();
             Boolean state = entry.getValue();
             gRules.setOrCreateGameRule(rule, state ? "true" : "false");
         }
-
     }
 
     @SubscribeEvent
     public void onWorldUnLoad(WorldEvent.Unload event) {
         GameRules gRules = event.world.getGameRules();
-
         for (Map.Entry<String, Boolean> entry : Main.instance.config.rules.entrySet()) {
             String rule = entry.getKey();
             Boolean state = gRules.getGameRuleBooleanValue(rule);
             Main.instance.config.rules.put(rule, state);
         }
-
         Main.instance.config.saveConfig();
-
     }
 }

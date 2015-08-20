@@ -17,7 +17,6 @@ public class ModGuiHandler implements IGuiHandler {
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		if (ID == MOD_TILE_ENTITY_GUI)
 			return new ContainerModTileEntity(player.inventory, (ModTileEntity) world.getTileEntity(new BlockPos(x, y, z)));
-		
 		return null;
 	}
 
@@ -25,7 +24,6 @@ public class ModGuiHandler implements IGuiHandler {
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		if (ID == MOD_TILE_ENTITY_GUI)
 			return new GuiModTileEntity(new ContainerModTileEntity(player.inventory, (ModTileEntity) world.getTileEntity(new BlockPos(x, y, z))));
-
 		return null;
 	}
 }

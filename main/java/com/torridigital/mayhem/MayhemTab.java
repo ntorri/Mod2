@@ -28,7 +28,6 @@ public class MayhemTab extends CreativeTabs {
 		return ModItems.mayhemItem;
 	}
 	
-	
 	@SideOnly(Side.CLIENT)
     public void displayAllReleventItems(List itemList) {
         
@@ -126,16 +125,13 @@ public class MayhemTab extends CreativeTabs {
         itemList.add(ench);
         
         //Adds all armor enchantments
-        // this.addEnchantmentBooksToList(itemList, new EnumEnchantmentType[] { EnumEnchantmentType.ARMOR});
-        
+        // this.addEnchantmentBooksToList(itemList, new EnumEnchantmentType[] { EnumEnchantmentType.ARMOR});  
     }
     
-	
 	public void addMetaDataItems(List itemList, Item item, int range) {
 
 		//Adds meta items
         for (int i = 0; i < range; ++i) {
-
             itemList.add(new ItemStack(item, 1, i));
         }
     }
