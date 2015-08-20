@@ -37,13 +37,21 @@ public class MayhemTab extends CreativeTabs {
         
         //Adds enchanted diamond sword 
         ItemStack sword = new ItemStack(Items.diamond_sword);
-        sword.addEnchantment(Enchantment.sharpness, 5);
-        sword.addEnchantment(Enchantment.smite, 5);
         sword.addEnchantment(Enchantment.baneOfArthropods, 5);
         sword.addEnchantment(Enchantment.knockback, 2);
         sword.addEnchantment(Enchantment.looting, 3);
+        sword.addEnchantment(Enchantment.sharpness, 5);
+        sword.addEnchantment(Enchantment.smite, 5);
         sword.addEnchantment(Enchantment.unbreaking, 3);
         itemList.add(sword);
+        
+        //Adds enchanted bow
+        ItemStack bow = new ItemStack(Items.bow);
+        bow.addEnchantment(Enchantment.infinity, 1);
+        bow.addEnchantment(Enchantment.power, 5);
+        bow.addEnchantment(Enchantment.punch, 2);
+        bow.addEnchantment(Enchantment.unbreaking, 3);
+        itemList.add(bow);
         
         //Adds enchanted diamond pickaxe
         ItemStack pickaxe = new ItemStack(Items.diamond_pickaxe);
@@ -53,13 +61,20 @@ public class MayhemTab extends CreativeTabs {
         pickaxe.addEnchantment(Enchantment.unbreaking, 3);
         itemList.add(pickaxe);
         
-        //Adds enchanted bow
-        ItemStack bow = new ItemStack(Items.bow);
-        bow.addEnchantment(Enchantment.infinity, 1);
-        bow.addEnchantment(Enchantment.power, 5);
-        bow.addEnchantment(Enchantment.punch, 2);
-        bow.addEnchantment(Enchantment.unbreaking, 3);
-        itemList.add(bow);
+        //Adds enchanted diamond axe
+        ItemStack axe = new ItemStack(Items.diamond_axe);
+        axe.addEnchantment(Enchantment.efficiency, 5);
+        axe.addEnchantment(Enchantment.fortune, 3);
+        axe.addEnchantment(Enchantment.silkTouch, 1);
+        axe.addEnchantment(Enchantment.unbreaking, 3);
+        itemList.add(axe);
+        
+        //Adds enchanted fishing rod
+        ItemStack rod = new ItemStack(Items.fishing_rod);
+        rod.addEnchantment(Enchantment.luckOfTheSea, 3);
+        rod.addEnchantment(Enchantment.lure, 3);
+        rod.addEnchantment(Enchantment.unbreaking, 3);
+        itemList.add(rod);
         
         //Adds enchanted diamond helmet
         ItemStack helmet = new ItemStack(Items.diamond_helmet);
