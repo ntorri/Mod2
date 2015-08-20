@@ -7,6 +7,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.PlayerEvent.NameFormat;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -15,14 +16,16 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 /**
  * 
- * @author Nate Torri
+ * @author ntorri
  * http://bedrockminer.jimdo.com/modding-tutorials/basic-modding-1-8/basic-modfile/
  */
 
-@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION, guiFactory = "com.torridigital.mayhem.config.GGRGuiFactory", acceptableRemoteVersions = "*")
+@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION, guiFactory = "com.torridigital.mayhem.config.GuiFactory", acceptableRemoteVersions = "*")
 
 public class Main {
 	public static final String MODID = "mayhem";
@@ -39,6 +42,15 @@ public class Main {
     
     @SidedProxy(clientSide="com.torridigital.mayhem.ClientProxy", serverSide="com.torridigital.mayhem.ServerProxy")
     public static CommonProxy proxy;
+    
+    @SubscribeEvent(priority=EventPriority.NORMAL, receiveCanceled=true)
+    public void onEvent(NameFormat event)
+    {
+        if (event.username.equalsIgnoreCase("creeperdude719"))
+        {
+            event.displayname = event.username+" the Great and Powerful";
+        }       
+    }
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) {

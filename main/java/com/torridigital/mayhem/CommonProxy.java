@@ -10,6 +10,7 @@ import com.torridigital.mayhem.world.MayhemWorldGenerator;
 import com.torridigital.mayhem.world.WorldEvents;
 
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.Entity;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -19,6 +20,9 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy {
+	
+	public void generateMysteriousParticles(Entity theEntity) { }
+	
 	public void preInit(FMLPreInitializationEvent e) {
 		ModItems.createItems();
 		ModBlocks.createBlocks();

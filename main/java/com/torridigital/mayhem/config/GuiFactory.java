@@ -1,12 +1,12 @@
 package com.torridigital.mayhem.config;
 
-import java.util.Set;
+import java.util.*;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.fml.client.IModGuiFactory;
 
-public class GGRGuiFactory implements IModGuiFactory {
+public class GuiFactory implements IModGuiFactory {
 
     @Override
     public void initialize(Minecraft minecraftInstance) {
@@ -15,12 +15,14 @@ public class GGRGuiFactory implements IModGuiFactory {
 
     @Override
     public Class<? extends GuiScreen> mainConfigGuiClass() {
-        return GGRConfigGUI.class;
+        return ConfigGUI.class;
     }
 
     @Override
     public Set<RuntimeOptionCategoryElement> runtimeGuiCategories() {
-        return null;
+    	Set<RuntimeOptionCategoryElement> setElements = new HashSet();
+    	setElements.add(new RuntimeOptionCategoryElement("magicbeans", "giant"));
+        return setElements;
     }
 
     @Override
