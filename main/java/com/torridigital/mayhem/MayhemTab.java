@@ -31,8 +31,11 @@ public class MayhemTab extends CreativeTabs {
 	
 	@SideOnly(Side.CLIENT)
     public void displayAllReleventItems(List itemList) {
-         
-        //Adds diamond sword 
+        
+		//Adds the mayhem items
+        super.displayAllReleventItems(itemList);
+        
+        //Adds enchanted diamond sword 
         ItemStack sword = new ItemStack(Items.diamond_sword);
         sword.addEnchantment(Enchantment.sharpness, 5);
         sword.addEnchantment(Enchantment.smite, 5);
@@ -42,19 +45,66 @@ public class MayhemTab extends CreativeTabs {
         sword.addEnchantment(Enchantment.unbreaking, 3);
         itemList.add(sword);
         
-        //Adds diamond pickaxe
+        //Adds enchanted diamond pickaxe
         ItemStack pickaxe = new ItemStack(Items.diamond_pickaxe);
         pickaxe.addEnchantment(Enchantment.efficiency, 5);
         pickaxe.addEnchantment(Enchantment.fortune, 3);
         pickaxe.addEnchantment(Enchantment.silkTouch, 1);
         pickaxe.addEnchantment(Enchantment.unbreaking, 3);
         itemList.add(pickaxe);
-         
-        //Adds all armor enchantments
-        this.addEnchantmentBooksToList(itemList, new EnumEnchantmentType[] { EnumEnchantmentType.ARMOR});
         
-        //Adds the mayhem items
-        super.displayAllReleventItems(itemList);
+        //Adds enchanted bow
+        ItemStack bow = new ItemStack(Items.bow);
+        bow.addEnchantment(Enchantment.infinity, 1);
+        bow.addEnchantment(Enchantment.power, 5);
+        bow.addEnchantment(Enchantment.punch, 2);
+        bow.addEnchantment(Enchantment.unbreaking, 3);
+        itemList.add(bow);
+        
+        //Adds enchanted diamond helmet
+        ItemStack helmet = new ItemStack(Items.diamond_helmet);
+        helmet.addEnchantment(Enchantment.aquaAffinity, 1);
+        helmet.addEnchantment(Enchantment.blastProtection, 4);
+        helmet.addEnchantment(Enchantment.fireProtection, 4);
+        helmet.addEnchantment(Enchantment.projectileProtection, 4);
+        helmet.addEnchantment(Enchantment.protection, 4);
+        helmet.addEnchantment(Enchantment.respiration, 3);
+        helmet.addEnchantment(Enchantment.unbreaking, 3);
+        itemList.add(helmet);
+        
+        //Adds enchanted diamond chestplate
+        ItemStack chestplate = new ItemStack(Items.diamond_chestplate);
+        chestplate.addEnchantment(Enchantment.blastProtection, 4);
+        chestplate.addEnchantment(Enchantment.fireProtection, 4);
+        chestplate.addEnchantment(Enchantment.projectileProtection, 4);
+        chestplate.addEnchantment(Enchantment.protection, 4);
+        chestplate.addEnchantment(Enchantment.thorns, 3);
+        chestplate.addEnchantment(Enchantment.unbreaking, 3);
+        itemList.add(chestplate);
+        
+        //Adds enchanted diamond leggings
+        ItemStack leggings = new ItemStack(Items.diamond_leggings);
+        leggings.addEnchantment(Enchantment.blastProtection, 4);
+        leggings.addEnchantment(Enchantment.fireProtection, 4);
+        leggings.addEnchantment(Enchantment.projectileProtection, 4);
+        leggings.addEnchantment(Enchantment.protection, 4);
+        leggings.addEnchantment(Enchantment.unbreaking, 3);
+        itemList.add(leggings);
+        
+        //Adds enchanted diamond boots
+        ItemStack boots = new ItemStack(Items.diamond_boots);
+        boots.addEnchantment(Enchantment.blastProtection, 4);
+        boots.addEnchantment(Enchantment.depthStrider, 3);
+        boots.addEnchantment(Enchantment.featherFalling, 4);
+        boots.addEnchantment(Enchantment.fireProtection, 4);
+        boots.addEnchantment(Enchantment.projectileProtection, 4);
+        boots.addEnchantment(Enchantment.protection, 4);
+        boots.addEnchantment(Enchantment.unbreaking, 3);
+        itemList.add(boots);
+        
+        //Adds all armor enchantments
+        // this.addEnchantmentBooksToList(itemList, new EnumEnchantmentType[] { EnumEnchantmentType.ARMOR});
+        
     }
     
 	
