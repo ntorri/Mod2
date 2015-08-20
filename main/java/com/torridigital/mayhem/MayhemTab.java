@@ -117,6 +117,14 @@ public class MayhemTab extends CreativeTabs {
         boots.addEnchantment(Enchantment.unbreaking, 3);
         itemList.add(boots);
         
+        //Adds 32 cooked steak
+        ItemStack steak = new ItemStack(Items.cooked_beef, 32);
+        itemList.add(steak);
+        
+        //Adds 64 bottles o' enchanting
+        ItemStack ench = new ItemStack(Items.experience_bottle, 64);
+        itemList.add(ench);
+        
         //Adds all armor enchantments
         // this.addEnchantmentBooksToList(itemList, new EnumEnchantmentType[] { EnumEnchantmentType.ARMOR});
         
