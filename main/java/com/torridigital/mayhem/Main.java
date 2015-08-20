@@ -22,7 +22,16 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 /**
  * 
  * @author ntorri
- * http://bedrockminer.jimdo.com/modding-tutorials/basic-modding-1-8/basic-modfile/
+ * http://bedrockminer.jimdo.com/modding-tutorials/basic-modding-1-8/
+ * http://jabelarminecraft.blogspot.com/
+ * https://github.com/MrCrayfish
+ * https://github.com/GoryMoon/GlobalGameRules
+ * https://github.com/devoxx4kids/materials/blob/master/workshops/minecraft/
+ * https://github.com/Choonster/TestMod2/tree/c629341ce0f19a277fc7a5d86e7866488f1197dd/src/main/java/com/choonster/testmod2
+ * http://www.minecraftforum.net/forums/mapping-and-modding/mapping-and-modding-tutorials/2282788-1-7-1-8-thexfactor117s-forge-modding-tutorials-20
+ * http://minecraft.gamepedia.com/Enchanting
+ * http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-tools
+ * http://www.getpaint.net/index.html
  */
 
 @Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION, guiFactory = "com.torridigital.mayhem.config.GuiFactory", acceptableRemoteVersions = "*")
