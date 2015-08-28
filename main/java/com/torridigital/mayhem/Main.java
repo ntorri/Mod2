@@ -1,7 +1,6 @@
 package com.torridigital.mayhem;
 
 import com.torridigital.mayhem.config.Config;
-import com.torridigital.mayhem.world.WorldEvents;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;

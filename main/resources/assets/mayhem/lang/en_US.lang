@@ -27,7 +27,7 @@ item.mayhem_chocolate.name=Chocolate
 item.lucky_candy.name=Lucky Candy
 
 tile.tile_entity.name=Tile Entity
-
+container.mayhem_tile_entity=Mod Tile Entity
 enchantment.arrowFast=Haste
 
 itemGroup.standard=Mayhem Mod

@@ -7,6 +7,7 @@ import com.torridigital.mayhem.tileentity.ModTileEntity;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
@@ -24,6 +25,7 @@ public class ModBlockTileEntity extends BlockContainer {
 		this.setHardness(2.0f);
 		this.setResistance(6.0f);
 		this.setHarvestLevel("pickaxe", 2);
+		this.setCreativeTab(CreativeTabs.tabBlock);
 	}
 
 	@Override
