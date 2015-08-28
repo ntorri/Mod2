@@ -23,7 +23,7 @@ public class ModTileEntity extends TileEntity implements IInventory {
 
 	@Override
 	public String getName() {
-		return this.hasCustomName() ? this.customName : "container.tutorial_tile_entity";
+		return this.hasCustomName() ? this.customName : "container.mayhem_tile_entity";
 	}
 
 	@Override
