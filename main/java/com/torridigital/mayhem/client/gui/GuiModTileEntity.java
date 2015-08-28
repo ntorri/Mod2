@@ -27,7 +27,7 @@ public class GuiModTileEntity extends GuiContainer {
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
 		GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
-		this.mc.getTextureManager().bindTexture(new ResourceLocation("tutorial:textures/gui/container/mod_tile_entity.png"));
+		this.mc.getTextureManager().bindTexture(new ResourceLocation("mayhem:textures/gui/container/mod_tile_entity.png"));
 		this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
 	}
 
