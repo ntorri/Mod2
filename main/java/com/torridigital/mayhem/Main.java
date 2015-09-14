@@ -2,6 +2,7 @@ package com.torridigital.mayhem;
 
 import com.torridigital.mayhem.config.Config;
 
+import minersbasic.api.network.PacketHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.util.ResourceLocation;
@@ -21,6 +22,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 /**
  * 
  * @author ntorri
+ * https://github.com/coolAlias/Tutorial-Demo
  * http://bedrockminer.jimdo.com/modding-tutorials/basic-modding-1-8/
  * http://jabelarminecraft.blogspot.com/
  * https://github.com/MrCrayfish
@@ -50,6 +52,8 @@ public class Main {
     
     @SidedProxy(clientSide="com.torridigital.mayhem.ClientProxy", serverSide="com.torridigital.mayhem.ServerProxy")
     public static CommonProxy proxy;
+    
+    public static PacketHandler packetHandler;
     
     @SubscribeEvent(priority=EventPriority.NORMAL, receiveCanceled=true)
     public void onEvent(NameFormat event)

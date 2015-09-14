@@ -4,13 +4,17 @@ import com.torridigital.mayhem.Main;
 import com.torridigital.mayhem.client.render.items.MetaItem;
 import com.torridigital.mayhem.client.render.items.ModItemAdvancedFood;
 import com.torridigital.mayhem.client.render.items.ModItemFood;
+import com.torridigital.mayhem.network.packets.MayhemPacket;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -76,5 +80,15 @@ public class ModItems {
 				.addPotionEffect(new PotionEffect(Potion.wither.id, 200, 4), 0.5)
 				.setAlwaysEdible(), "lucky_candy");
 		luckyCandy.setCreativeTab(Main.tabMayhem);
+		
+		GameRegistry.registerItem(new Item() {
+			@Override
+			public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn) {
+				if (worldIn.isRemote) {
+					Main.packetHandler.sendToServer(new MayhemPacket("Hello world"));
+				}
+				return itemStackIn;
+			}
+		}.setCreativeTab(CreativeTabs.tabMisc), "packetitem");
 	}
 }
