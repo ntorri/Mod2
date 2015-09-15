@@ -42,6 +42,7 @@ public class ModItems {
 	public static Item luckyCandy;
 
 	public static void createItems() {
+		// Register items 
 		GameRegistry.registerItem(mayhemItem = new BasicItem("mayhem_item"), "mayhem_item");
 		mayhemItem.setCreativeTab(Main.tabMayhem);
 		GameRegistry.registerItem(metaItem = new MetaItem("meta_item"), "meta_item");
@@ -59,6 +60,7 @@ public class ModItems {
 		GameRegistry.registerItem(mayhemMultitool = new ItemModMultitool("mayhem_multitool", MAYHEM), "mayhem_multitool");
 		mayhemMultitool.setCreativeTab(Main.tabMayhem);
 		
+		//Register armor
 		GameRegistry.registerItem(mayhemHelmet = new ItemModArmor("mayhem_helmet", MAYHEMA, 1, 0), "mayhem_helmet");
 		mayhemHelmet.setCreativeTab(Main.tabMayhem);
 		GameRegistry.registerItem(mayhemChestplate = new ItemModArmor("mayhem_chestplate", MAYHEMA, 1, 1), "mayhem_chestplate");
