@@ -88,6 +88,7 @@ public class ModItems {
 			public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn) {
 				if (worldIn.isRemote) {
 					Main.packetHandler.sendToServer(new MayhemPacket("Hello world"));
+					playerIn.openGui(Main.instance, 0, worldIn, (int) playerIn.posX, (int) playerIn.posY, (int) playerIn.posZ);
 				}
 				return itemStackIn;
 			}

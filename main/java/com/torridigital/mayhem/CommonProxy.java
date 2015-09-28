@@ -3,6 +3,7 @@ package com.torridigital.mayhem;
 import com.torridigital.mayhem.blocks.ModBlocks;
 import com.torridigital.mayhem.config.Config;
 import com.torridigital.mayhem.crafting.ModCrafting;
+import com.torridigital.mayhem.event.EventHandlerCommon;
 import com.torridigital.mayhem.items.ModItems;
 import com.torridigital.mayhem.network.ModGuiHandler;
 import com.torridigital.mayhem.network.packets.MayhemPacket;
@@ -41,8 +42,11 @@ public class CommonProxy {
     	MinecraftForge.EVENT_BUS.register(new WorldEvents());
     	GameRegistry.registerWorldGenerator(new MayhemWorldGenerator(), 0);
     	NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new ModGuiHandler());
+    	
     	Main.packetHandler = MinersbasicAPI.createPacketHandler("mayhem");
 		Main.packetHandler.registerPacket(MayhemPacket.class, new MayhemPacket.Handler(), Side.SERVER);
+		
+		MinecraftForge.EVENT_BUS.register(new EventHandlerCommon());
     }
 
     public void postInit(FMLPostInitializationEvent e) {
