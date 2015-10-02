@@ -7,6 +7,8 @@ import com.torridigital.mayhem.event.EventHandlerCommon;
 import com.torridigital.mayhem.items.ModItems;
 import com.torridigital.mayhem.network.ModGuiHandler;
 import com.torridigital.mayhem.network.packets.MayhemPacket;
+import com.torridigital.mayhem.network.packets.PacketSyncMana;
+import com.torridigital.mayhem.network.packets.PacketSyncPlayerData;
 import com.torridigital.mayhem.tileentity.ModTileEntities;
 import com.torridigital.mayhem.world.MayhemWorldGenerator;
 import com.torridigital.mayhem.world.WorldEvents;
@@ -45,7 +47,8 @@ public class CommonProxy {
     	
     	Main.packetHandler = MinersbasicAPI.createPacketHandler("mayhem");
 		Main.packetHandler.registerPacket(MayhemPacket.class, new MayhemPacket.Handler(), Side.SERVER);
-		
+		Main.packetHandler.registerBidiPacket(PacketSyncPlayerData.class, new PacketSyncPlayerData.Handler());
+		Main.packetHandler.registerPacket(PacketSyncMana.class, new PacketSyncMana.Handler(), Side.CLIENT);
 		MinecraftForge.EVENT_BUS.register(new EventHandlerCommon());
     }
 
